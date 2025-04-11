@@ -19,10 +19,12 @@ from typing import Tuple
 from backend.functions.task import EventsItems, LibrariesItems, LogicItems, StepsItems
 import os
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-)
-CHATGPT_MODEL = "gpt-3.5-turbo"
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("The OPENAI_API_KEY environment variable is not set.")
+client = OpenAI(api_key=api_key)
+
+CHATGPT_MODEL = "gpt-4o"
 CHATGPT_TEMPERATURE = 0.2
 
 CHATGPT_INSTRUCTIONS = """
