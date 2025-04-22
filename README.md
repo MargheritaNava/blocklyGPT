@@ -120,3 +120,8 @@ Type: `Manager`
 * Username: `admin`  
 Password: `adminpassword`  
 Type: `Administrator`/`Manager`
+
+## Gazebo
+```bash
+ign gazebo -v 4 worldCobotta.sdf
+```
