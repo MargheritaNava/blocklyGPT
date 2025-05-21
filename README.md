@@ -117,6 +117,7 @@ Type: `Operator`
 Password: `passwordmanager1`  
 Type: `Manager`  
 
+### For Django admin panel "127.0.0.1:8000/admin/":
 * Username: `admin`  
 Password: `adminpassword`  
 Type: `Administrator`/`Manager`
