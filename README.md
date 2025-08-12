@@ -4,7 +4,7 @@ This repository contains the prototype implementation of the project described i
 
 > Gargioni, Luigi and Fogli, Daniela.
 > "Integrating ChatGPT with Blockly for End-User Development of Robot Tasks"  
-> *Companion of the 2024 ACM/IEEE International Conference on Human-Robot Interaction*, pages 478--482, 2024.  
+> _Companion of the 2024 ACM/IEEE International Conference on Human-Robot Interaction_, pages 478--482, 2024.  
 > Publisher: ACM New York, NY.
 
 ## Citation
@@ -29,14 +29,14 @@ This paper presents an End-User Development environment for collaborative robot 
 
 ## :gear: BackEnd
 
-* Default Port: ```8000```
+- Default Port: `8000`
 
 ---
 
 ### :dart: Requirements
 
-* [Python 3.11.x](https://www.python.org/downloads/)
-* [Poetry](https://python-poetry.org/docs/#installation) (pip installation is not the official one, but the easiest)
+- [Python 3.11.x](https://www.python.org/downloads/)
+- [Poetry](https://python-poetry.org/docs/#installation) (pip installation is not the official one, but the easiest)
 
 ---
 
@@ -75,15 +75,15 @@ poetry run poetryup
 
 ## :dizzy: FrontEnd
 
-* Folder: ```src```
+- Folder: `src`
 
 ---
 
 ### :books: Design libraries
 
-* [React 18.x.x](https://it.reactjs.org/)
-* [Parcel](https://parceljs.org/)
-* [Ant Design](https://ant.design/)
+- [React 18.x.x](https://it.reactjs.org/)
+- [Parcel](https://parceljs.org/)
+- [Ant Design](https://ant.design/)
 
 ---
 
@@ -97,7 +97,7 @@ npm install
 
 ### :twisted_rightwards_arrows: Update dependencies in package.json
 
-* Visual Studio Code Exstension: [Versions Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+- Visual Studio Code Exstension: [Versions Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 
 ---
 
@@ -109,20 +109,35 @@ npm start
 
 ## :key: Credentials
 
-* Username: `operator1`  
-Password: `Operator_1!`  
-Type: `Operator`  
+- Username: `operator1`  
+  Password: `Operator_1!`  
+  Type: `Operator`
 
-* Username: `manager1`  
-Password: `passwordmanager1`  
-Type: `Manager`  
+- Username: `manager1`  
+  Password: `passwordmanager1`  
+  Type: `Manager`
 
 ### For Django admin panel "127.0.0.1:8000/admin/":
-* Username: `admin`  
-Password: `adminpassword`  
-Type: `Administrator`/`Manager`
+
+- Username: `admin`  
+  Password: `adminpassword`  
+  Type: `Administrator`/`Manager`
 
 ## Gazebo
+
 ```bash
 ign gazebo -v 4 worldCobotta.sdf
 ```
+
+## :rocket: Gazebo Workflow
+
+### :play_arrow: Startup Sequence
+
+To start the complete Gazebo simulation environment, run the following batch files in order:
+
+1. `cobotta_node.bat` - Initialize Cobotta robot node
+2. `flask_node.bat` - Start Flask backend service
+3. `gazebo_bridge.bat` - Launch Gazebo communication bridge
+4. `gazebo.bat` - Start Gazebo simulation environment
+5. `npm start.bat` - Launch frontend development server
+6. `poetry run start.bat` - Start Python backend server
